@@ -1,0 +1,199 @@
+/* Allgemeines Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background-color: #222;
+    color: white;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Suchleiste & Hashtag-Suche */
+#searchInput {
+    width: 50%;
+    padding: 12px;
+    font-size: 16px;
+    margin-top: 10px;
+    border: none;  /* Kein Rand */
+    outline: none; /* Kein Fokus-Rand */
+    background-color: #f0f0f0; /* Heller Hintergrund */
+    border-radius: 8px;
+    box-shadow: none !important;  /* Entfernt alle Schatten */
+}
+
+#suggestions {
+    width: 50%;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 1000;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.suggestion {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.suggestion:hover {
+    background: #f0f0f0;
+}
+
+/* Trending Hashtags */
+#trending {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.hashtag {
+    cursor: pointer;
+    color: blue;
+    margin: 0 5px;
+}
+
+.hashtag:hover {
+    text-decoration: underline;
+}
+
+/* Video-Karten */
+.video-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.video-card {
+    background: white;
+    padding: 15px;
+    margin: 15px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.video-card:hover {
+    transform: scale(1.05);
+}
+
+.thumbnail {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.video-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.video-upload-time {
+    font-size: 14px;
+    color: gray;
+}
+
+.hashtags {
+    font-size: 12px;
+    color: #555;
+}
+
+/* Upload-Seite */
+.upload-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 50%;
+    margin: 20px auto;
+}
+
+.upload-container input,
+.upload-container textarea,
+.upload-container button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.upload-container button {
+    background-color: #222;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.upload-container button:hover {
+    background-color: #444;
+}
+
+/* Profil-Seite */
+.profile-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 60%;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+}
+
+.profile-picture {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.profile-info h2 {
+    margin: 0;
+}
+
+.profile-bio {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Mobile Optimierung */
+@media screen and (max-width: 768px) {
+    #searchInput {
+        width: 80%;
+    }
+
+    .video-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .upload-container, .profile-container {
+        width: 90%;
+    }
+}
