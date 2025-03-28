@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video-Streaming Plattform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <h1>Meine Video-Plattform</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="upload.html">Video hochladen</a>
+            <a href="profile.html">Mein Profil</a>
+        </nav>
+    </header>
+
+    <!-- Suchleiste -->
+    <input type="text" id="searchInput" placeholder="Suche nach Videos oder Hashtags...">
+    <div id="suggestions"></div>                                                             
+
+    <!-- Trending Hashtags -->
+    <div id="trending">
+        <strong>Trending:</strong>
+        <span class="hashtag">#Gaming</span>
+        <span class="hashtag">#Technologie</span>
+        <span class="hashtag">#Vlog</span>
+    </div>
+
+    <!-- Video-Liste -->
+    <div class="video-list" id="videoContainer">
+        <!-- Videos werden hier per JavaScript eingefügt -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
